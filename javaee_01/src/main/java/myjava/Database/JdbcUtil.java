@@ -1,4 +1,4 @@
-package myjava;
+package myjava.Database;
 import java.sql.*;
 
 
@@ -12,12 +12,13 @@ public class JdbcUtil {
     }
     public static Connection getConnection() throws SQLException{
 
-        String dbUrl="jdbc:mysql://localhost:3306/newdatabase?serverTimezone=UTC";
-        String dbUser="root";
-        String dbPassword="Mengchuize";
+//        String dbUrl="jdbc:mysql://localhost:3306/newdatabase?serverTimezone=UTC";
+//        String dbUser="root";
+//        String dbPassword="Mengchuize";
 
-        return DriverManager.getConnection(dbUrl,dbUser,dbPassword);
-
+//        return DriverManager.getConnection(dbUrl,dbUser,dbPassword);
+        //数据库连接池
+        return DatabasePool.getHikarDataSourse().getConnection();
     }
 
     public static void close(Statement stmt,Connection conn) throws SQLException{

@@ -1,7 +1,7 @@
 package myjava.servlets;
 
 
-import myjava.JdbcUtil;
+import myjava.Database.JdbcUtil;
 
 import myjava.tables.Teacher;
 
